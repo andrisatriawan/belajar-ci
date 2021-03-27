@@ -46,4 +46,11 @@ class Guru extends CI_Controller
             redirect(base_url('guru'));
         }
     }
+
+    public function edit($id)
+    {
+        $data['data_guru'] = $this->M_guru->getOneGuru($id);
+
+        $this->load->view('guru/edit', $data);
+    }
 }

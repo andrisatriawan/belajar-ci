@@ -19,4 +19,9 @@ class M_guru extends CI_Model
 
         return $this->db->insert('tb_guru', $data);
     }
+
+    public function getOneGuru($id)
+    {
+        return $this->db->get_where('tb_guru', ['id' => $id])->row_array();
+    }
 }
