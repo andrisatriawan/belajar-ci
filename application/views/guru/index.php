@@ -2,10 +2,10 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $judul ?></h1>
+    <h1 class="h3 mb-4 text-gray-800"><?= $judul_laman ?></h1>
     <div class="row">
         <div class="col-8">
-            <a href="" class="btn btn-primary mb-3">Tambah Guru</a>
+            <a href="<?= base_url('guru/tambah') ?>" class="btn btn-primary mb-3">Tambah Guru</a>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -29,7 +29,7 @@
                             <td><?= $g['jenis_kelamin'] ?></td>
                             <td><?= $g['alamat'] ?></td>
                             <td>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="<?= base_url('guru/edit/') . $g['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                 <a href="" class="btn btn-sm btn-danger">Hapus</a>
                             </td>
                         </tr>
